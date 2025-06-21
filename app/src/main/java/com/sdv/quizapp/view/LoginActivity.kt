@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
         viewModel.loginResult.observe(this) { result ->
             when (result) {
                 is LoginViewModel.LoginResult.Success -> {
-                    navigateToQuiz(result.user)
+                    navigateToMain(result.user)
                 }
                 is LoginViewModel.LoginResult.Error -> {
                     Toast.makeText(this, result.message, Toast.LENGTH_LONG).show()
@@ -92,8 +92,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToQuiz(user: User) {
-        val intent = Intent(this, QuizActivity::class.java).apply {
+    private fun navigateToMain(user: User) {
+        val intent = Intent(this, MainActivity::class.java).apply {
             putExtra("USER_ID", user.id.toInt())
             putExtra("USERNAME", user.username)
         }

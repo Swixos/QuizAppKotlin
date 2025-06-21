@@ -48,7 +48,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupUI() {
         binding.apply {
+            // ✅ CORRECTION : Utiliser getString avec format ou concaténation
             tvWelcome.text = "Bienvenue $username !"
+            // Ou alternative plus sûre :
+            // tvWelcome.text = getString(R.string.welcome_message, username)
+            // Ou encore :
+            // tvWelcome.text = "Bienvenue " + username + " !"
 
             btnStartQuiz.setOnClickListener {
                 selectedCategory?.let { category ->
@@ -93,16 +98,16 @@ class MainActivity : AppCompatActivity() {
     private fun showConfirmationDialog(category: Category) {
         AlertDialog.Builder(this)
             .setTitle("Confirmation")
-            .setMessage("Voulez-vous commencer le quiz dans la catégorie \"${category.name}\" ?\n\nVous aurez 10 questions à répondre.")
-            .setPositiveButton("Commencer") { _, _ ->
-                startQuiz(category)
+            .setMessage("Voulez-vous commencer le quiz dans la catégorie \"${category.name}\" ?\n\nVous devrez choisir la difficulté.")
+            .setPositiveButton("Continuer") { _, _ ->
+                goToDifficultySelection(category)
             }
             .setNegativeButton("Annuler", null)
             .show()
     }
 
-    private fun startQuiz(category: Category) {
-        val intent = Intent(this, QuizActivity::class.java).apply {
+    private fun goToDifficultySelection(category: Category) {
+        val intent = Intent(this, DifficultySelectionActivity::class.java).apply {
             putExtra("CATEGORY_ID", category.id)
             putExtra("CATEGORY_NAME", category.name)
             putExtra("USER_ID", userId)

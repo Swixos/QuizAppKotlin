@@ -30,7 +30,7 @@ class QuizActivity : AppCompatActivity() {
 
     private var categoryId: Int = 9 // Default: General Knowledge
     private var categoryName: String = "Culture Générale"
-    private var difficulty: String = "mixed" // Pour l'instant mixte par défaut
+    private var difficulty: String = "mixed"
     private var userId: Int = 0
     private var username: String = ""
 
@@ -43,6 +43,9 @@ class QuizActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Récupérer les données de l'intent
+        categoryId = intent.getIntExtra("CATEGORY_ID", 9)
+        categoryName = intent.getStringExtra("CATEGORY_NAME") ?: "Culture Générale"
+        difficulty = intent.getStringExtra("DIFFICULTY") ?: "mixed"
         userId = intent.getIntExtra("USER_ID", 0)
         username = intent.getStringExtra("USERNAME") ?: ""
 
@@ -53,7 +56,7 @@ class QuizActivity : AppCompatActivity() {
         setupUI()
         observeViewModel()
 
-        // Charger les questions avec difficulté par défaut
+        // Charger les questions avec la difficulté choisie
         viewModel.loadQuestions(categoryId, difficulty)
     }
 

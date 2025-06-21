@@ -29,6 +29,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".view.DifficultySelectionActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".view.QuizActivity"
             android:exported="false" />
 
