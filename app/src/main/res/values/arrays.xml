@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_options">
+        <item>🎲 Mixte</item>
+        <item>🟢 Facile</item>
+        <item>🟡 Moyenne</item>
+        <item>🔴 Difficile</item>
+    </string-array>
+
+    <string-array name="difficulty_values">
+        <item>mixed</item>
+        <item>easy</item>
+        <item>medium</item>
+        <item>hard</item>
+    </string-array>
+</resources>

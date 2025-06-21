@@ -1,3 +1,59 @@
 <resources>
-    <string name="app_name">QuizApp</string>
+    <string name="app_name">Quiz App</string>
+
+    <!-- Login/Register -->
+    <string name="login_title">Connexion</string>
+    <string name="register_title">Inscription</string>
+    <string name="username_hint">Nom d\'utilisateur</string>
+    <string name="password_hint">Mot de passe</string>
+    <string name="confirm_password_hint">Confirmer le mot de passe</string>
+    <string name="login_button">Se connecter</string>
+    <string name="register_button">S\'inscrire</string>
+    <string name="switch_to_register">S\'inscrire</string>
+    <string name="switch_to_login">Retour à la connexion</string>
+
+    <!-- Main Screen -->
+    <string name="welcome_message">Bienvenue %1$s !</string>
+    <string name="select_category">Choisissez une catégorie</string>
+    <string name="start_quiz">Commencer le Quiz</string>
+    <string name="view_leaderboard">Voir le classement</string>
+
+    <!-- Quiz Screen -->
+    <string name="question_progress">Question %1$d/%2$d</string>
+    <string name="correct_answers">Correctes: %1$d</string>
+    <string name="incorrect_answers">Incorrectes: %1$d</string>
+    <string name="next_question">Question suivante</string>
+    <string name="finish_quiz">Terminer le quiz</string>
+    <string name="see_results">Voir les résultats</string>
+
+    <!-- Leaderboard -->
+    <string name="leaderboard_title">Classement</string>
+    <string name="other_rankings">Autres classements</string>
+    <string name="back_button">Retour</string>
+    <string name="score_format">%1$d/10</string>
+
+    <!-- Categories -->
+    <string name="category_general">Général</string>
+    <string name="category_books">Livres</string>
+    <string name="category_film">Cinéma</string>
+    <string name="category_music">Musique</string>
+
+    <!-- Difficulty -->
+    <string name="difficulty_easy">Facile</string>
+    <string name="difficulty_medium">Moyen</string>
+    <string name="difficulty_hard">Difficile</string>
+
+    <!-- Question Types -->
+    <string name="type_multiple">Choix multiple</string>
+    <string name="type_boolean">Vrai/Faux</string>
+
+    <!-- Messages -->
+    <string name="loading">Chargement...</string>
+    <string name="error_network">Erreur de réseau</string>
+    <string name="error_loading_questions">Impossible de charger les questions</string>
+    <string name="error_loading_categories">Impossible de charger les catégories</string>
+    <string name="quiz_confirmation_title">Confirmation</string>
+    <string name="quiz_confirmation_message">Voulez-vous commencer le quiz dans la catégorie \"%1$s\" ?\n\nVous aurez 10 questions à répondre.</string>
+    <string name="start">Commencer</string>
+    <string name="cancel">Annuler</string>
 </resources>
